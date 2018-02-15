@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Get the current day and time</title>
+</head>
+<body>
+<div id="current-day"></div>
+<div id="current-time"></div>
+<script>
+    var week = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri','Sat'];
+    var date = new Date();
+    var day = date.getDay();
+    var hour = date.getHours();
+    var minute = date.getMinutes();
+    var sec = date.getSeconds();
+
+    //convert to 12hr system
+    if (hour > 12){
+        hour = hour - 12 ;
+        hour = hour + ' PM';
+    }else{
+        hour = hour + ' AM';
+    }
+    //displaying date
+    document.getElementById("current-day").innerHTML = 'Today is: '+ week[day];
+    document.getElementById("current-time").innerHTML = 'Current time is: '+ hour +':' + minute +':'+ sec;
+
+
+</script>
+</body>
+</html>

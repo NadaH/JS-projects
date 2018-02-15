@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>print current page</title>
+    <style>
+        button{
+            border-radius: 3px;
+            background-color: #fff;
+            border: 2px solid #06accd;
+            font-weight: bold;
+        }
+        div{
+            width: 500px;
+            margin: 50px auto;
+            background: #f3f3f3;
+            padding: 50px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h1>Lorem ipsum</h1>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+    </p>
+<h3>Click the button to print the current page.</h3>
+
+<button onclick="func()">Print</button>
+</div>
+<script>
+    function func() {
+        window.print();
+    }
+</script>
+
+</body>
+</html>

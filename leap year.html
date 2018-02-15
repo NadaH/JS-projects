@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>leap year</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <style>
+        input{
+            display: block;
+            margin: 15px;
+            border-radius: 5px;
+            border: 2px solid #ccc;
+            padding: 5px;
+        }
+        div{
+            background-color: #f3f3f3;
+            width: 50%;
+            margin: 60px auto;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Find out is this a leap year or not</h2>
+<form>
+    <input class="fom-control" type="text" id="year" placeholder="Enter the year...">
+    <input class="btn-warning btn" type="button" onclick="is_leap()" value="Find out!">
+    <div id="result"></div>
+</form>
+</div>
+<script>
+
+    function is_leap() {
+        var year = parseInt(document.getElementById('year').value);
+        if (year % 4 !== 0) {
+            document.getElementById("result").innerHTML = "is NOT leap";
+        }
+        if (year % 4 === 0) {
+            if (year % 100 === 0 && year % 400 !== 0) {
+                document.getElementById("result").innerHTML = "the year is leap";
+            }
+        }else if(isNaN(year)){
+            document.getElementById("result").innerHTML = "Not a number, Enter a number!";
+
+        }
+    }
+</script>
+</body>
+</html>

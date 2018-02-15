@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>1st January is being a Sunday</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<div id="sundays"></div>
+<div id="mon"></div>
+
+<script>
+            for (var year = 2014; year <= 2050; year++){
+                var d = new Date(year);
+                var month = d.getMonth();
+                var week = d.getDay();
+                var day = d.getDate()
+                if(week==0&& month==0&& day==1 ){
+                    document.getElementById('sundays').innerHTML = "In" + year + "January was a Sunday.";
+                }
+            }
+//    for (var year = 2014; year < 2050; year++) {
+//        var d = new Date(year, 0, 1);
+//        if (d.getDay() === 0)
+//            console.log("1st January is being a Sunday  " + year);
+//        document.getElementById('sundays').innerHTML = "In" + year + "January was a Sunday.";
+//    }
+</script>
+</body>
+</html>

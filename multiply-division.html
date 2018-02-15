@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>multiply and divide</title>
+</head>
+<body>
+<form>
+    <input id="first" placeholder="Enter first number">
+    <input id="sec" placeholder="Enter sec number">
+    <input type="button" onclick="multiply()" value="multiply">
+    <input type="button" onclick="divide()" value="divide">
+</form>
+<p id="result"></p>
+
+<script>
+
+
+    function multiply() {
+        var x = document.getElementById("first").value;
+        var y = document.getElementById("sec").value;
+        document.getElementById("result").innerHTML = "The result is: " + x * y;
+    }
+
+    function divide() {
+        var x = document.getElementById("first").value;
+        var y = document.getElementById("sec").value;
+        document.getElementById("result").innerHTML = "the result is: " + x / y;
+    }
+
+</script>
+</body>
+</html>

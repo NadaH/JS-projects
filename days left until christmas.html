@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Days left until christmas</title>
+    <style>
+        #left{
+            text-align: center;
+            font-weight: bold;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+<div id="left"></div>
+<script>
+  var d = new Date();
+  var m = d.getMonth();
+  var months_left = 11 - m;
+  var days_left = months_left * 30 ;
+  document.getElementById('left').innerHTML = 'we have ' + days_left + ' days untill next Christmas.';
+</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<html>
+<head>
+    <title>area of a triangle</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <style>
+         div.container{
+             background-color: #e7e7e7;
+             margin: 50px auto;
+             width: 60%;
+             padding: 20px;
+             border-radius: 5px;
+         }
+        input {
+            display: block;
+            margin: 15px;
+            border-radius: 5px;
+            border: 2px solid #ccc;
+            padding: 5px;
+        }
+
+        input[type= "button"] {
+            border-radius: 3px;
+            border: 2px solid #06accd;
+            background-color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+<h1 class="text-center">the length of triangle side</h1>
+        <div class="col-xs-6">
+        <form>
+    <input id="x" placeholder="Enter first side">
+    <input id="y" placeholder="Enter second side">
+    <input id="z" placeholder="Enter third side">
+    <input type="button" onclick="calc()" value="Calculate the area">
+</form>
+        </div>
+        <div class="col-xs-6">
+            <h2 id="area"><strong>The area is:</strong> ??</h2>
+            </div>
+    </div>
+</div>
+<script>
+    function calc() {
+        var x = document.getElementById("x").value;
+        var y = document.getElementById("y").value;
+        var z = document.getElementById("z").value;
+        var s = (x + y + z) / 2;
+        var output = document.getElementById("area");
+        var area = Math.sqrt(s * (s - x) * (s - y) * (s - z));
+        if (isNaN(x) || isNaN(y) || isNaN(z)){
+            output.textContent = "not a number";
+        }else{
+           output.textContent = 'The area is: ' + area;
+        }
+    }
+</script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>
