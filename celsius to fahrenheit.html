@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature converter</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <style>
+        input{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 class="text-center">Convert temperature</h1>
+    <form>
+        <input id="Tc" class="form-control" placeholder="enter temperature in Celsius">
+        <input id="Tf" class="form-control" placeholder="enter temperature in Fahrenheit">
+        <input type="button" class="btn btn-warning" value="convert" onclick="convert()" >
+<p id="cel"></p>
+<p id="feh"></p>
+
+
+    </form>
+</div>
+<script>
+
+    function convert() {
+        var c = document.getElementById("Tc").value;
+        var f = document.getElementById("Tf").value;
+       f = c * 9/5 + 32;
+       c = ((f-32)/9)*5;
+        document.getElementById("feh").innerHTML = "the result in Fahrenhiet: "+ f;
+        document.getElementById("cel").innerHTML = "the result in Celsius: "+ c;
+    }
+    console.log(c);
+</script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>
